@@ -1,30 +1,34 @@
-header {
+.header {
     background-color: var(--header-background-color);
     padding: 1rem;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-  }
-  
-  header h1 {
-    color: white;
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  nav ul li {
-    margin: 0;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
+    align-items: center
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav-div {
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+.header-text {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.a:hover {
+  text-decoration: underline;
+}

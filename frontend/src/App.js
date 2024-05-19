@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
 import HomePage from './pages/HomePage';
 import AddRecipePage from './pages/AddRecipePage';
 import RecipePage from './pages/RecipePage';
@@ -15,7 +14,6 @@ function App() {
       <div className="App">
         <Header />
         <div className="content">
-          <Sidebar />
           <main>
             <Routes>
               <Route path="/" element={<HomePage />} />
