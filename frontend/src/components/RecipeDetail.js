@@ -1,33 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { getRecipeById } from '../utils/api';
+import React from 'react';
 
-const RecipeDetail = () => {
-  const { id } = useParams();
-  const [recipe, setRecipe] = useState(null);
+const RecipeDetail = ({ title, description, ingredients, instructions, imageUrl }) => {
 
-  useEffect(() => {
-    const fetchRecipe = async () => {
-      const recipeData = await getRecipeById(id);
-      setRecipe(recipeData);
-    };
-
-    fetchRecipe();
-  }, [id]);
-
-  if (!recipe) return <div>Loading...</div>;
+  if (!title) return <div>Загрузка...</div>;
 
   return (
     <div>
-      <h2>{recipe.title}</h2>
-      <h3>Ingredients:</h3>
+      <h2>{title}</h2>
+      <img
+        className='card-imageUrl' 
+        src={imageUrl} 
+        alt={title} 
+      />
+      <h3>Описание:</h3>
+      <p>{description}</p>
+      <h3>Ингредиенты:</h3>
       <ul>
-        {recipe.ingredients.map((ingredient, index) => (
+        {ingredients.map((ingredient, index) => (
           <li key={index}>{ingredient}</li>
         ))}
       </ul>
-      <h3>Instructions:</h3>
-      <p>{recipe.instructions}</p>
+      <h3>Инструкции:</h3>
+      <ol>
+        {instructions.map((instruction, index) => (
+          <li key={index}>{instruction}</li>
+        ))}
+      </ol>
     </div>
   );
 };
