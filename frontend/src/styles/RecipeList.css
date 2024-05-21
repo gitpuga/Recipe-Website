@@ -3,18 +3,19 @@
   text-align: center;
   margin-bottom: 20px;
 }
-  
+
 .recipe-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .card {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,34 +24,36 @@
   padding: 25px;
 }
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-  .card-imageUrl {
-    margin-top: 30px;
-    width: 70%;
-    height: auto;
-  }
+.card-imageUrl {
+  box-sizing: border-box;
+  margin-top: 30px;
+  image-resolution: 300dpi;
+  height: 50%;
+  width: 50%;
+}
 
-  .card-title {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    margin: 0.5rem 0;
-    color: var(--text-color);
-  }
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
 
-  .card-description {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #555;
-  }
+.card-description {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+}
 
-  .a-card {
-    text-decoration: none;
-  }
+.a-card {
+  text-decoration: none;
+}
 
-  .a-card:hover {
-    text-decoration: none;
-  }
+.a-card:hover {
+  text-decoration: none;
+}
