@@ -35,7 +35,8 @@
 .accessibility-mode .header-text,
 .accessibility-mode .contact-card-title,
 .accessibility-mode .contact-card-text,
-.accessibility-mode .recipe-list-input {
+.accessibility-mode .recipe-list-search,
+.accessibility-mode .recipe-list-filter {
   color: #000;
   font-size: 2rem;
 }

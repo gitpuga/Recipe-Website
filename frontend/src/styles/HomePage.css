@@ -18,6 +18,7 @@
 .recipe-list-search:focus {
   border-color: var(--primary-color);
   outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 .recipe-list-search:hover {
   transform: translateY(-1px);
@@ -34,20 +35,28 @@
   gap: 1rem;
 }
 .recipe-list-filter {
+  width: 13rem;
+  color: #757575;
   padding: 1.2rem;
   border: 1px solid #ddd;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .recipe-list-filter:focus {
   border-color: var(--primary-color);
   outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 .recipe-list-filter:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-list-option {
+  margin-top: 2rem;
 }
 
 .recipe-list-container {

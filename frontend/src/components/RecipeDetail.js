@@ -11,28 +11,34 @@ const RecipeDetail = ({
   if (!title) return <div>Загрузка...</div>;
 
   return (
-    <div className="dCard-container">
-      <div className="dCard">
-        <h2 className="dCard-title">{title}</h2>
-        <img className="dCard-img" src={imageUrl} alt={title} />
-        <div className="dCard-description-block">
-          <h3 className="dCard-titles">Описание:</h3>
-          <p className="dCard-description">{description}</p>
-        </div>
-        <hr className="dCard-divider" />
-        <h3 className="dCard-titles">Ингредиенты:</h3>
-        <ul className="dCard-list">
+    <div className="details-container">
+      <div className="detail-card">
+        <hr className="detail-card-divider" />
+        <h2 className="detail-card-title">{title}</h2>
+        <img className="detail-card-img" src={imageUrl} alt={title} />
+        <h3 className="detail-card-description-title">Описание:</h3>
+        <p className="detail-card-description">{description}</p>
+        <hr className="detail-card-divider" />
+      </div>
+      <div className="detail-card">
+        <hr className="detail-card-divider" />
+        <h3 className="detail-card-titles">Ингредиенты:</h3>
+        <hr className="detail-card-divider" />
+        <ul className="detail-card-list">
           {ingredients.map((ingredient, index) => (
-            <li className="dCard-list-text" key={index}>
+            <li className="detail-card-list-text" key={index}>
               {ingredient}
             </li>
           ))}
         </ul>
-        <hr className="dCard-divider" />
-        <h3 className="dCard-titles">Инструкции:</h3>
-        <ol className="dCard-list">
+      </div>
+      <div className="detail-card">
+        <hr className="detail-card-divider" />
+        <h3 className="detail-card-titles">Инструкции:</h3>
+        <hr className="detail-card-divider" />
+        <ol className="detail-card-list">
           {instructions.map((instruction, index) => (
-            <li className="dCard-list-text" key={index}>
+            <li className="detail-card-list-text" key={index}>
               {instruction}
             </li>
           ))}

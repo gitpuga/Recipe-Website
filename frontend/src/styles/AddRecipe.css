@@ -30,13 +30,22 @@
   border-radius: 10px;
   margin-bottom: 20px;
   font-size: 1.2rem;
+  transition: transform 0.2s, box-shadow 0.5s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   border-color: var(--primary-color);
   outline: none;
+  transform: translateY(-1px);
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.form-input:hover,
+.form-textarea:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .form-button {
@@ -47,9 +56,12 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.2s, background-color 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .form-button:hover {
   background-color: var(--secondary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
