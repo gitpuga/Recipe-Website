@@ -1,9 +1,30 @@
 footer {
-    background-color: var(--footer-background-color);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: var(--footer-background-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.accessibility-button {
+  background-color: var(--primary-color);
+  font-weight: bolder;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+
+}
+
+.accessibility-button:hover {
+  background-color: var(--secondary-color);
+  transition: background-color 0.3s;
+}

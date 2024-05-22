@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
+import "../styles/ContactPage.css";
 
 const ContactPage = () => (
-  <div>
-    <h2>Контакты</h2>
-    <p>Свяжитесь с нами по электронной почте: info@cookbook.com</p>
+  <div className="contact-card-container">
+    <div className="contact-card">
+      <h2 className="contact-card-title">Контакты</h2>
+      <p className="contact-card-text">
+        Свяжитесь с нами по электронной почте: info@cookbook.com
+      </p>
+    </div>
   </div>
 );
 

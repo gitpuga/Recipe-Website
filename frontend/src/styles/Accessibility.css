@@ -1,0 +1,52 @@
+.accessibility-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+.accessibility-mode .header,
+.accessibility-mode .footer {
+  background-color: #fff;
+}
+
+.accessibility-mode .card,
+.accessibility-mode .dCard {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.accessibility-mode .footer-text,
+.accessibility-mode .card-description,
+.accessibility-mode .card-title,
+.accessibility-mode .h2-recipe-list,
+.accessibility-mode .dCard-titles,
+.accessibility-mode .dCard-title,
+.accessibility-mode .dCard-description,
+.accessibility-mode .dCard-list-text,
+.accessibility-mode .h2-add-recipe,
+.accessibility-mode .form-button {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.accessibility-mode .form-label,
+.accessibility-mode .form-textarea,
+.accessibility-mode .form-input,
+.accessibility-mode .header-text,
+.accessibility-mode .contact-card-title,
+.accessibility-mode .contact-card-text,
+.accessibility-mode .recipe-list-input {
+  color: #000;
+  font-size: 2rem;
+}
+
+.accessibility-mode footer {
+  background-color: #fff;
+  color: #000;
+  font-size: 2rem;
+}
+
+.accessibility-mode .dCard-img {
+  width: 100%;
+  height: auto;
+}

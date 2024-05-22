@@ -15,8 +15,8 @@ const AddRecipe = () => {
     const recipe = {
       title,
       description,
-      ingredients: ingredients.split(","),
-      instructions: ingredients.split(","),
+      ingredients: ingredients.split(",").map((item) => item.trim()),
+      instructions: instructions.split(",").map((item) => item.trim()),
       imageUrl,
     };
 
@@ -30,49 +30,43 @@ const AddRecipe = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <div>
-        <label className="form-label">Название:</label>
-        <input
-          className="form-input"
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      </div>
-      <div>
-        <label className="form-label">Описание:</label>
-        <input
-          className="form-input"
-          type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-      </div>
-      <div>
-        <label className="form-label">Ингредиенты:</label>
-        <textarea
-          className="form-textarea"
-          type="text"
-          value={ingredients}
-          onChange={(e) => setIngredients(e.target.value)}
-        />
-      </div>
-      <div>
-        <label className="form-label">Инструкции:</label>
-        <textarea
-          className="form-textarea"
-          value={instructions}
-          onChange={(e) => setInstructions(e.target.value)}
-        />
-      </div>
-      <div>
-        <label className="form-label">Ссылка на изображение:</label>
-        <input
-          value={imageUrl}
-          className="form-input"
-          onChange={(e) => setImageUrl(e.target.value)}
-        />
-      </div>
+      <label className="form-label">Название:</label>
+      <input
+        className="form-input"
+        type="text"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        required="true"
+      />
+      <label className="form-label">Описание:</label>
+      <input
+        className="form-input"
+        type="text"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        required="true"
+      />
+      <label className="form-label">Ингредиенты (разделите запятыми):</label>
+      <textarea
+        className="form-textarea"
+        type="text"
+        value={ingredients}
+        onChange={(e) => setIngredients(e.target.value)}
+        required="true"
+      />
+      <label className="form-label">Инструкции (разделите запятыми):</label>
+      <textarea
+        className="form-textarea"
+        value={instructions}
+        onChange={(e) => setInstructions(e.target.value)}
+        required="true"
+      />
+      <label className="form-label">Ссылка на изображение:</label>
+      <input
+        value={imageUrl}
+        className="form-input"
+        onChange={(e) => setImageUrl(e.target.value)}
+      />
       <button type="submit" className="form-button">
         Добавить
       </button>

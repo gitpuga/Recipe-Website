@@ -7,15 +7,6 @@
   align-items: center;
 }
 
-.header-divider {
-  border-left: 1px solid #38546d;
-  border-right: 1px solid #16222c;
-  height: 2.5rem;
-  width: 1px;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .header-nav {
   display: flex;
   flex-direction: row;
