@@ -51,3 +51,7 @@
   width: 100%;
   height: auto;
 }
+
+.accessibility-mode .recipe-list-filter {
+  width: 20rem;
+}
