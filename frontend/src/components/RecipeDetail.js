@@ -8,7 +8,6 @@ const RecipeDetail = ({
   instructions,
   imageUrl,
 }) => {
-  if (!title) return <div>Загрузка...</div>;
 
   return (
     <div className="details-container">

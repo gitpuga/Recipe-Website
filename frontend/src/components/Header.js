@@ -24,11 +24,11 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <nav className="header-right-container">
-        <button className="header-user-button">
+      <div className="header-right-container">
+        <Link className="header-user-button" to="/user">
           <FaUser size={20} className="header-user-icon" />
-        </button>
-      </nav>
+        </Link>
+      </div>
     </header>
   );
 };

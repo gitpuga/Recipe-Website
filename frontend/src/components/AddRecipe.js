@@ -8,6 +8,7 @@ const AddRecipe = () => {
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,12 +21,17 @@ const AddRecipe = () => {
       imageUrl,
     };
 
-    await addRecipe(recipe);
-    setTitle("");
-    setDescription("");
-    setIngredients("");
-    setInstructions("");
-    setImageUrl("");
+    const response = await addRecipe(recipe);
+    if (response.error) {
+      setError(response.error);
+    } else {
+      setTitle("");
+      setDescription("");
+      setIngredients("");
+      setInstructions("");
+      setImageUrl("");
+      setError("Рецепт добавлен успешно");
+    }
   };
 
   return (
@@ -36,7 +42,7 @@ const AddRecipe = () => {
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        required="true"
+        required
       />
       <label className="form-label">Описание:</label>
       <input
@@ -44,7 +50,7 @@ const AddRecipe = () => {
         type="text"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-        required="true"
+        required
       />
       <label className="form-label">Ингредиенты (разделите запятыми):</label>
       <textarea
@@ -52,14 +58,14 @@ const AddRecipe = () => {
         type="text"
         value={ingredients}
         onChange={(e) => setIngredients(e.target.value)}
-        required="true"
+        required
       />
       <label className="form-label">Инструкции (разделите запятыми):</label>
       <textarea
         className="form-textarea"
         value={instructions}
         onChange={(e) => setInstructions(e.target.value)}
-        required="true"
+        required
       />
       <label className="form-label">Ссылка на изображение:</label>
       <input
@@ -67,6 +73,7 @@ const AddRecipe = () => {
         className="form-input"
         onChange={(e) => setImageUrl(e.target.value)}
       />
+      {error && <p>{error}</p>}
       <button type="submit" className="form-button">
         Добавить
       </button>
