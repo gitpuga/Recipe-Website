@@ -24,7 +24,9 @@
 .accessibility-mode .dCard-description,
 .accessibility-mode .dCard-list-text,
 .accessibility-mode .h2-add-recipe,
-.accessibility-mode .form-button {
+.accessibility-mode .form-button,
+.accessibility-mode .login-form-button,
+.accessibility-mode .register-form-button {
   color: #fff;
   font-size: 2rem;
 }
@@ -33,10 +35,17 @@
 .accessibility-mode .form-textarea,
 .accessibility-mode .form-input,
 .accessibility-mode .header-text,
+.accessibility-mode .header-title-text,
 .accessibility-mode .contact-card-title,
 .accessibility-mode .contact-card-text,
 .accessibility-mode .recipe-list-search,
-.accessibility-mode .recipe-list-filter {
+.accessibility-mode .recipe-list-filter,
+.accessibility-mode .register-form-title,
+.accessibility-mode .login-form-title,
+.accessibility-mode .login-label,
+.accessibility-mode .login-input,
+.accessibility-mode .password-label,
+.accessibility-mode .password-input {
   color: #000;
   font-size: 2rem;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { register } from "../utils/api";
+import "../styles/Form.css";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -17,11 +18,12 @@ const Register = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Регистрация</h2>
+    <form className="register-form" onSubmit={handleSubmit}>
+      <h2 className="register-form-title">Регистрация</h2>
       <div>
-        <label>Логин:</label>
+        <label className="login-label">Логин:</label>
         <input
+          className="login-input"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -29,16 +31,19 @@ const Register = () => {
         />
       </div>
       <div>
-        <label>Пароль:</label>
+        <label className="password-label">Пароль:</label>
         <input
+          className="password-input"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
       </div>
-      {error && <p>{error}</p>}
-      <button type="submit">Регистрация</button>
+      {error && <p className="form-error">{error}</p>}
+      <button className="register-form-button" type="submit">
+        Регистрация
+      </button>
     </form>
   );
 };

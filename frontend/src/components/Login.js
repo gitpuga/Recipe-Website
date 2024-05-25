@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { login } from "../utils/api";
+import "../styles/Form.css";
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState("");
@@ -18,11 +19,12 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Вход</h2>
+    <form className="login-form" onSubmit={handleSubmit}>
+      <h2 className="login-form-title">Вход</h2>
       <div>
-        <label>Логин:</label>
+        <label className="login-label">Логин:</label>
         <input
+          className="login-input"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -30,16 +32,19 @@ const Login = ({ onLogin }) => {
         />
       </div>
       <div>
-        <label>Пароль:</label>
+        <label className="password-label">Пароль:</label>
         <input
+          className="password-input"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
       </div>
-      {error && <p>{error}</p>}
-      <button type="submit">Вход</button>
+      {error && <p className="form-error">{error}</p>}
+      <button className="login-form-button" type="submit">
+        Вход
+      </button>
     </form>
   );
 };

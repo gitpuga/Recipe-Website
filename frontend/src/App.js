@@ -13,7 +13,6 @@ import NotFoundPage from "./pages/NotFoundPage";
 import "./styles/App.css";
 import "./styles/Accessibility.css";
 
-
 function App() {
   const [isAccessibilityMode, setAccessibilityMode] = useState(false);
   const [searchTerm] = useState("");
@@ -41,7 +40,15 @@ function App() {
                 <Route
                   path="/add-recipe"
                   element={
-                    user ? <AddRecipePage /> : <Login onLogin={handleLogin} />
+                    user ? (
+                      <AddRecipePage />
+                    ) : (
+                      <div className="forms-page-container">
+                        <div className="forms-container">
+                          <Login onLogin={handleLogin} />
+                        </div>
+                      </div>
+                    )
                   }
                 />
                 <Route path="/recipe/:id" element={<RecipePage />} />
@@ -57,9 +64,11 @@ function App() {
                         difficultyFilter={difficultyFilter}
                       />
                     ) : (
-                      <div>
-                        <Register />
-                        <Login onLogin={handleLogin} />
+                      <div className="forms-page-container">
+                        <div className="forms-container">
+                          <Register />
+                          <Login onLogin={handleLogin} />
+                        </div>
                       </div>
                     )
                   }

@@ -56,27 +56,59 @@ const RecipeList = ({ searchTerm, ingredientFilter, difficultyFilter }) => {
     navigate(`/recipe/${recipeId}`);
   };
 
+  const handleAddFavourite = (recipeId) => {};
+
   return (
     <div className="recipe-list-container">
       <div className="recipe-list">
         {filteredRecipes.map((recipe) => (
-          <div
-            className="card"
-            onClick={() => handleCardClick(recipe._id)}
-            key={recipe._id}
-          >
-            <hr className="card-divider" />
-            <div className="card-text-container">
-              <p className="card-title">{recipe.title}</p>
-              <p className="card-description">{recipe.description}</p>
+          <div className="card">
+            <hr
+              className="card-divider"
+              onClick={() => handleCardClick(recipe._id)}
+              key={recipe._id}
+            />
+            <div
+              className="card-text-container"
+              onClick={() => handleCardClick(recipe._id)}
+              key={recipe._id}
+            >
+              <p
+                className="card-title"
+                onClick={() => handleCardClick(recipe._id)}
+                key={recipe._id}
+              >
+                {recipe.title}
+              </p>
+              <p
+                className="card-description"
+                onClick={() => handleCardClick(recipe._id)}
+                key={recipe._id}
+              >
+                {recipe.description}
+              </p>
             </div>
-            <hr className="card-divider" />
-            <div className="card-image-container">
+            <hr
+              className="card-divider"
+              onClick={() => handleCardClick(recipe._id)}
+              key={recipe._id}
+            />
+            <div
+              className="card-image-container"
+              onClick={() => handleCardClick(recipe._id)}
+              key={recipe._id}
+            >
               <img
                 className="card-image"
                 src={recipe.imageUrl}
                 alt={recipe.title}
               />
+            </div>
+            <div
+              onClick={() => handleAddFavourite(recipe._id)}
+              className="card-button-container"
+            >
+              <button className="card-button">⭐</button>
             </div>
           </div>
         ))}

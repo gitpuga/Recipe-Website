@@ -74,6 +74,17 @@
   color: #555;
 }
 
+.card-button-container {
+  display: flex;
+  align-items: right;
+}
+
+.card-button {
+  background-color: white;
+  border: none;
+  font-size: 2rem;
+}
+
 .a-card {
   text-decoration: none;
 }

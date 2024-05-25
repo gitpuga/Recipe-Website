@@ -1,30 +1,56 @@
-.h2-add-recipe {
-  text-align: center;
-  margin-bottom: 2rem;
+.forms-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form {
+.forms-container {
+  display: flex;
+  max-width: 80rem;
+  justify-self: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.login-form,
+.register-form {
   background: white;
   display: flex;
   flex-direction: column;
   padding: 2rem;
   border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-  max-width: 60rem;
+  /* margin: 0 auto; */
+  width: 100%;
+  max-width: 25rem;
   height: 100%;
-  margin-bottom: 5rem;
 }
 
-.form-label {
+.login-form:hover,
+.register-form:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-form-title,
+.register-form-title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.login-label,
+.password-label {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.form-input,
-.form-textarea {
+.login-input,
+.password-input {
   width: 100%;
   padding: 1.2rem;
   border: 1px solid #ddd;
@@ -35,21 +61,16 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.form-input:focus,
-.form-textarea:focus {
+.login-input:focus,
+.password-input:focus {
   border-color: var(--primary-color);
   outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
-.form-input:hover,
-.form-textarea:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.form-button {
+.login-form-button,
+.register-form-button {
   background-color: var(--primary-color);
   font-size: 1.5rem;
   color: white;
@@ -61,7 +82,8 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.form-button:hover {
+.login-form-button:hover,
+.register-form-button:hover {
   background-color: var(--secondary-color);
   transform: translateY(-1px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
