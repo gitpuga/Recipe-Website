@@ -26,6 +26,8 @@
   transition: transform 0.2s, box-shadow 0.2s;
   padding: 25px;
   height: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .card-text-container {
@@ -68,7 +70,8 @@
   color: var(--primary-color);
 }
 
-.card-description {
+.card-description,
+.card-image[alt]{
   font-size: 1rem;
   font-weight: bold;
   color: #555;
@@ -76,7 +79,9 @@
 
 .card-button-container {
   display: flex;
-  align-items: right;
+  flex-direction: column;
+  height: 100%;
+  justify-content: end;
 }
 
 .card-button {
