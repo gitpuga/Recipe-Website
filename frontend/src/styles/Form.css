@@ -1,15 +1,8 @@
-.forms-page-container {
+.login-form-container,
+.register-form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.forms-container {
-  display: flex;
-  max-width: 80rem;
-  justify-self: center;
-  align-items: center;
-  gap: 2rem;
 }
 
 .login-form,
@@ -21,9 +14,8 @@
   border-radius: 8px;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* margin: 0 auto; */
   width: 100%;
-  max-width: 25rem;
+  max-width: 50rem;
   height: 100%;
 }
 
@@ -41,14 +33,6 @@
   text-align: center;
 }
 
-.login-label,
-.password-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
 .login-input,
 .password-input {
   width: 100%;
@@ -59,6 +43,23 @@
   font-size: 1.2rem;
   transition: transform 0.2s, box-shadow 0.5s;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login-input::placeholder,
+.password-input::placeholder {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+.login-input[type="text"],
+.login-input[type="password"],
+.register-form-input[type="text"],
+.register-form-input[type="email"],
+.register-form-input[type="password"] {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
 }
 
 .login-input:focus,
@@ -76,7 +77,7 @@
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.3s;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -87,4 +88,38 @@
   background-color: var(--secondary-color);
   transform: translateY(-1px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.login-form-button-text,
+.register-form-button-text {
+  font-family: var(--font-family);
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.form-error {
+  padding-bottom: 1rem;
+}
+
+.login-form-link,
+.register-form-link {
+  display: flex;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.login-form-link-text,
+.register-form-link-text {
+  color: rgb(81, 183, 246);
+  text-decoration: none;
+  margin-left: 0.3rem;
+  transition: color 0.2s;
+}
+
+.login-form-link-text:hover,
+.register-form-link-text:hover {
+  color: rgb(96, 96, 255);
+  text-decoration: underline;
 }

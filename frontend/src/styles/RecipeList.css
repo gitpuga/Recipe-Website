@@ -26,8 +26,6 @@
   transition: transform 0.2s, box-shadow 0.2s;
   padding: 25px;
   height: 100%;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .card-text-container {
@@ -50,17 +48,12 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card-image-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 .card-image {
   height: auto;
   width: 100%;
   max-height: 50rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .card-title {

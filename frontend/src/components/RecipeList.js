@@ -56,38 +56,26 @@ const RecipeList = ({ searchTerm, ingredientFilter, difficultyFilter }) => {
     navigate(`/recipe/${recipeId}`);
   };
 
-  const handleAddFavourite = (recipeId) => {};
-
   return (
     <div className="recipe-list-container">
       <div className="recipe-list">
         {filteredRecipes.map((recipe) => (
-          <div className="card">
-            <div onClick={() => handleCardClick(recipe._id)}>
-              <hr className="card-divider" key={recipe._id} />
-              <div className="card-text-container" key={recipe._id}>
-                <p className="card-title" key={recipe._id}>
-                  {recipe.title}
-                </p>
-                <p className="card-description" key={recipe._id}>
-                  {recipe.description}
-                </p>
-              </div>
-              <hr className="card-divider" key={recipe._id} />
-              <div className="card-image-container" key={recipe._id}>
-                <img
-                  className="card-image"
-                  src={recipe.imageUrl}
-                  alt={recipe.title}
-                />
-              </div>
+          <div
+            className="card"
+            onClick={() => handleCardClick(recipe._id)}
+            key={recipe._id}
+          >
+            <hr className="card-divider" />
+            <div className="card-text-container">
+              <p className="card-title">{recipe.title}</p>
+              <p className="card-description">{recipe.description}</p>
             </div>
-            <div
-              onClick={() => handleAddFavourite(recipe._id)}
-              className="card-button-container"
-            >
-              <button className="card-button">⭐</button>
-            </div>
+            <hr className="card-divider" />
+            <img
+              className="card-image"
+              src={recipe.imageUrl}
+              alt={recipe.title}
+            />
           </div>
         ))}
       </div>

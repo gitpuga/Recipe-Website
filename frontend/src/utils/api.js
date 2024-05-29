@@ -15,10 +15,12 @@ export const login = async (username, password) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
   });
-  const data = await response.json();
-  if (data.token) {
-    localStorage.setItem("token", data.token);
+
+  if (!response.ok) {
+    return { error: "Вход не удался, пожалуйста проверьте данные" };
   }
+
+  const data = await response.json();
   return data;
 };
 
@@ -38,7 +40,7 @@ export const addRecipe = async (recipe) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${token}`
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(recipe),
   });

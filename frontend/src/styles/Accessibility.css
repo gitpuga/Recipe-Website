@@ -25,8 +25,8 @@
 .accessibility-mode .dCard-list-text,
 .accessibility-mode .h2-add-recipe,
 .accessibility-mode .form-button,
-.accessibility-mode .login-form-button,
-.accessibility-mode .register-form-button {
+.accessibility-mode .login-form-button-text,
+.accessibility-mode .register-form-button-text {
   color: #fff;
   font-size: 2rem;
 }
@@ -45,7 +45,10 @@
 .accessibility-mode .login-label,
 .accessibility-mode .login-input,
 .accessibility-mode .password-label,
-.accessibility-mode .password-input {
+.accessibility-mode .password-input,
+.accessibility-mode .popup-text,
+.accessibility-mode .login-form-link,
+.accessibility-mode .register-form-link {
   color: #000;
   font-size: 2rem;
 }

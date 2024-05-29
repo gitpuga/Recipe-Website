@@ -19,8 +19,9 @@ router.post("/register", async (req, res) => {
 
 // Авторизация пользователя
 router.post("/login", async (req, res) => {
+  const { username, password } = req.body;
+  
   try {
-    const { username, password } = req.body;
     const user = await User.findOne({ username });
 
     if (!user || !(await bcrypt.compare(password, user.password))) {

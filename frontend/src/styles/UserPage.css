@@ -1,0 +1,31 @@
+.user-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logout-button {
+  background-color: var(--primary-color);
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.logout-button-text {
+  font-family: var(--font-family);
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
